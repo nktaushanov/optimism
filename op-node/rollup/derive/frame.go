@@ -10,10 +10,10 @@ import (
 	"github.com/ethereum-optimism/optimism/op-node/rollup/derive/params"
 )
 
-// Frames cannot be larger than 1 MB.
+// Frames cannot be larger than 10 MB.
 // Data transactions that carry frames are generally not larger than 128 KB due to L1 network conditions,
-// but we leave space to grow larger anyway (gas limit allows for more data).
-const MaxFrameLen = 1_000_000
+// but frames posted to an AltDa server can be larger.
+const MaxFrameLen = 10_000_000
 
 // Data Format
 //
